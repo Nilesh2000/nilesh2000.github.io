@@ -2,3 +2,8 @@ baseURL = 'https://nilesh2000.github.io'
 languageCode = 'en-us'
 title = 'Nilesh D'
 theme = 'minimal'
+
+[params]
+  github = "https://github.com/Nilesh2000"
+  twitter = "https://x.com/NileshD17726498"
+  linkedin = "https://www.linkedin.com/in/nilesh2000/"
