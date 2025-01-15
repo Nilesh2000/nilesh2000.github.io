@@ -33,3 +33,31 @@ a {
   color: #00e;
   text-decoration: none;
 }
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.social-icons a {
+  color: #111;
+  font-size: 1.4rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.08);
+}
