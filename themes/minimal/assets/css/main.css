@@ -2,8 +2,12 @@ body {
   color: #222;
   font-family: "Roboto", serif;
   line-height: 1.5;
-  margin: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
   max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -11,9 +15,13 @@ header {
   margin-bottom: 1rem;
 }
 
+main {
+  flex: 1;
+}
+
 footer {
   border-top: 1px solid #222;
-  margin-top: 1rem;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
