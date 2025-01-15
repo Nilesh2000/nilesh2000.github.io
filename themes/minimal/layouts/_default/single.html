@@ -3,7 +3,11 @@
 
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
+  {{ $wordCount := countwords .Content }}
+  {{ $readingTime := math.Ceil (div $wordCount 238.0) }}
+
   <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  <small>{{ $wordCount }} words ({{ $readingTime }} min read</small>)
 
   {{ .Content }}
   {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
