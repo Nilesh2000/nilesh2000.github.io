@@ -1,5 +1,16 @@
 {{ define "main" }}
   {{ .Content }}
+  <div>
+    <a href="{{ .Site.Params.github }}" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="{{ .Site.Params.linkedin }}" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="{{ .Site.Params.twitter }}" target="_blank">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
   {{ range site.RegularPages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}
