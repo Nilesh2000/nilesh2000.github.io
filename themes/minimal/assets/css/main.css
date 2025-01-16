@@ -39,10 +39,8 @@ footer i.fa-heart {
   color: red;
 }
 
-h1:not(.header-title) {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.25rem;
+h1:not(.header-title):not(.post-title) {
+  border-bottom: 2px solid #ccc;
 }
 
 h1,
@@ -64,7 +62,7 @@ a {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .social-icons a {
@@ -96,6 +94,7 @@ a {
 .post-title {
   font-size: 2.5rem;
   line-height: 1.3;
+  margin-bottom: 0.75rem;
 }
 
 .post-meta {
