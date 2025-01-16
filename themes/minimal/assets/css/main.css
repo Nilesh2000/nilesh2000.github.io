@@ -1,6 +1,6 @@
 body {
   color: #222;
-  font-family: "IBM Plex Sans", serif;;
+  font-family: "IBM Plex Sans", serif;
   line-height: 1.5;
   margin: 0 auto;
   padding: 1rem;
@@ -37,7 +37,19 @@ footer i.fa-heart {
   color: red;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1:not(.header-title) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
 }
