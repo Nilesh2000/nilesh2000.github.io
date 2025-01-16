@@ -1,13 +1,13 @@
 {{ define "main" }}
   {{ .Content }}
-  <div>
-    <a href="{{ .Site.Params.github }}" target="_blank">
+  <div class="social-icons">
+    <a href="{{ .Site.Params.github }}" target="_blank" aria-label="GitHub">
       <i class="fab fa-github"></i>
     </a>
-    <a href="{{ .Site.Params.linkedin }}" target="_blank">
+    <a href="{{ .Site.Params.linkedin }}" target="_blank" aria-label="LinkedIn">
       <i class="fab fa-linkedin"></i>
     </a>
-    <a href="{{ .Site.Params.twitter }}" target="_blank">
+    <a href="{{ .Site.Params.twitter }}" target="_blank" aria-label="Twitter">
       <i class="fab fa-twitter"></i>
     </a>
   </div>
