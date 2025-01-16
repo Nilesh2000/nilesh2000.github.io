@@ -4,9 +4,9 @@ draft = false
 title = 'Inception'
 +++
 
-I've always wanted to create a digital space for myself on the internet. But I kept procrastinating and never got started—until now. This year, I’m determined to change that. One of my New Year’s resolutions for 2025 is to write more.
+I've always wanted to create a digital space for myself on the internet, but I kept procrastinating and never got started. This year, I'm determined to change that. One of my New Year's resolutions for 2025 is to write more.
 
-I read a lot, and I have an overwhelming collection of bookmarks (yes, I have a hoarding problem 😅). I also take plenty of notes on Notion while reading and learning. The idea behind this blog is to publish some of those notes, version them via source control, and make them accessible from anywhere.
+I read extensively and maintain a comprehensive collection of bookmarks (yes, I have a hoarding problem 😅). I also take plenty of notes on Notion while reading and learning. The idea behind this blog is to share these notes and make them accessible from anywhere.
 
 My founder Chinmay says: **"Writing crystallizes your thinking."**. At my current company, One2N, the founders encourage us to keep learning something new every day and share the knowledge with others. And this blog will be my way of putting that advice into practice.
 
