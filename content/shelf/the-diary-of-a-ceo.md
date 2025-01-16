@@ -12,6 +12,8 @@ title = 'The Diary of a CEO'
     4. What you have - resources
     5. What the world thinks of you - reputation
 
+- A job that gives more cash (resources), but gives less knowledge and few skills is a low-paying job.
+
 - Those who hoard gold have riches for a moment. Those who hoard knowledge and skills have riches for a lifetime.
 
 - If you want to master something, teach it. Being able to understand and teach an idea is a path to understanding it.
