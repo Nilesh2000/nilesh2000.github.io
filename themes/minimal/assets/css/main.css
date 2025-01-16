@@ -132,3 +132,17 @@ a {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0.5rem 0;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+}
