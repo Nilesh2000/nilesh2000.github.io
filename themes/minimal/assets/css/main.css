@@ -22,6 +22,12 @@ main {
 footer {
   border-top: 1px solid #222;
   text-align: center;
+  padding-bottom: 1rem;
+  color: #555;
+}
+
+footer i.fa-heart {
+  color: red;
 }
 
 h1, h2, h3, h4, h5, h6 {
