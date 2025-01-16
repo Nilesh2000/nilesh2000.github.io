@@ -13,8 +13,35 @@ body {
 }
 
 header {
-  border-bottom: 1px solid #222;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 2.75rem;
+}
+
+.header-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #00e;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
 main {
@@ -105,3 +132,17 @@ a {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0.5rem 0;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+}
