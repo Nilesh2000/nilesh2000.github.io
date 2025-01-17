@@ -21,7 +21,8 @@ header {
 
 .header-title {
   margin: 0;
-  font-size: 2.75rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .header-title a {
@@ -62,8 +63,8 @@ footer {
   font-size: 0.9rem;
 }
 
-footer i.fa-heart {
-  color: red;
+.fa-heart {
+  color: #ff0000;
 }
 
 h1:not(.header-title):not(.post-title) {
@@ -130,6 +131,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.post-meta small {
+  margin-left: auto;
 }
 
 @media screen and (max-width: 768px) {
