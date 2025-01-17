@@ -63,8 +63,8 @@ footer {
   font-size: 0.9rem;
 }
 
-footer i.fa-heart {
-  color: red;
+.fa-heart {
+  color: #ff0000;
 }
 
 h1:not(.header-title):not(.post-title) {
