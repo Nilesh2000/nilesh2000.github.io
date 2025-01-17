@@ -119,6 +119,34 @@ nav a {
   color: inherit;
 }
 
+.home-content {
+  max-width: 42rem;
+  margin: 3rem auto;
+  font-size: 1.2rem;
+}
+
+.home-content p {
+  line-height: 1.6;
+}
+
+.home-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home-content li {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.home-content li::before {
+  content: "•";
+  color: var(--link-color);
+  position: absolute;
+  left: 0;
+}
+
 .social-icons {
   display: flex;
   gap: 1.25rem;
