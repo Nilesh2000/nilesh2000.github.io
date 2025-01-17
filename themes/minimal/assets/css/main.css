@@ -21,7 +21,8 @@ header {
 
 .header-title {
   margin: 0;
-  font-size: 2.75rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .header-title a {
