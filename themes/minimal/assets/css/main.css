@@ -9,6 +9,9 @@
   --social-icon-color: #111;
   --strong-bg: #f0f0f0;
   --text-color: #333;
+  --github-color: #24292e;
+  --linkedin-color: #0077b5;
+  --x-twitter-color: #000000;
 }
 
 [data-theme="dark"] {
@@ -22,6 +25,9 @@
   --social-icon-color: #e0e0e0;
   --strong-bg: #2d2d2d;
   --text-color: #e0e0e0;
+  --github-color: #f0f6fc;
+  --linkedin-color: #0077b5;
+  --x-twitter-color: #ffffff;
 }
 
 body {
@@ -112,30 +118,42 @@ nav a {
 
 .social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 .social-icons a {
   align-items: center;
   background: var(--social-icon-bg);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   color: var(--social-icon-color);
   display: flex;
   font-size: 1.4rem;
   height: 3.2rem;
   justify-content: center;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   width: 3.2rem;
 }
 
 .social-icons a:hover {
-  border-color: rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  color: #000;
-  transform: translateY(-2px);
+  border-color: transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.social-icons a:hover .fa-github {
+  color: var(--github-color);
+}
+
+.social-icons a:hover .fa-linkedin-in {
+  color: var(--linkedin-color);
+}
+
+.social-icons a:hover .fa-x-twitter {
+  color: var(--x-twitter-color);
 }
 
 .post-header {
