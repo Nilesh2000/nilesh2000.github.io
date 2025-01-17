@@ -1,5 +1,5 @@
 {{- /*
-Renders a menu for the given menu ID.
+Renders a menu for the given menu ID with a theme switcher.
 
 @context {page} page The current page.
 @context {string} menuID The menu ID.
@@ -14,6 +14,11 @@ Renders a menu for the given menu ID.
   <nav>
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      <li>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-regular fa-moon" id="theme-icon"></i>
+        </button>
+      </li>
     </ul>
   </nav>
 {{- end }}
