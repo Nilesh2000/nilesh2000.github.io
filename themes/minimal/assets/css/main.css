@@ -133,6 +133,10 @@ a {
   align-items: center;
 }
 
+.post-meta small {
+  margin-left: auto;
+}
+
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
