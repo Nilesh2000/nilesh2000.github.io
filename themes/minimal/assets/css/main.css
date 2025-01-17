@@ -88,6 +88,7 @@ main {
 footer {
   border-top: 1px solid var(--border-color);
   font-size: 0.9rem;
+  line-height: 1.5;
   padding-bottom: 1rem;
   text-align: center;
 }
@@ -207,5 +208,9 @@ nav a {
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
+  }
+
+  footer {
+    font-size: 0.85rem;
   }
 }
