@@ -9,6 +9,7 @@
   --social-icon-color: #111;
   --strong-bg: #f0f0f0;
   --text-color: #333;
+  --heart-color: #d64545;
   --github-color: #24292e;
   --linkedin-color: #0077b5;
   --x-twitter-color: #000000;
@@ -25,6 +26,7 @@
   --social-icon-color: #e0e0e0;
   --strong-bg: #2d2d2d;
   --text-color: #e0e0e0;
+  --heart-color: #e06c6c;
   --github-color: #f0f6fc;
   --linkedin-color: #0077b5;
   --x-twitter-color: #ffffff;
@@ -180,7 +182,7 @@ nav a {
 }
 
 .fa-heart {
-  color: #ff0000;
+  color: var(--heart-color);
 }
 
 #theme-toggle {
