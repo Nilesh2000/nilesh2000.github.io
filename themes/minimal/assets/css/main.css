@@ -1,36 +1,46 @@
+/* CSS Variables */
 :root {
-  --bg-color: #ffffff;
-  --border-color: #ddd;
-  --heading-border: #ccc;
-  --link-color: #00e;
-  --post-meta-color: #666;
-  --social-icon-bg: linear-gradient(145deg, #ffffff, #f5f5f5);
-  --strong-bg: #f0f0f0;
-  --text-color: #333;
-  --heart-color: #d64545;
-  --github-color: #24292e;
-  --linkedin-color: #0077b5;
-  --x-twitter-color: #000000;
+  --color-background: #ffffff;
+  --color-text-primary: #333;
+  --color-text-secondary: #666;
+
+  --color-border: #ddd;
+
+  --color-link: #00e;
+  --color-bg-strong: #f0f0f0;
+  --color-bg-social: linear-gradient(145deg, #ffffff, #f5f5f5);
+
+  /* Brand Colors */
+  --color-github: #24292e;
+  --color-linkedin: #0077b5;
+  --color-x-twitter: #000000;
+
+  --color-heart: #d64545;
 }
 
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
-  --border-color: #333;
-  --heading-border: #444;
-  --link-color: #66b3ff;
-  --post-meta-color: #999;
-  --social-icon-bg: linear-gradient(145deg, #222, #1a1a1a);
-  --strong-bg: #2d2d2d;
-  --text-color: #e0e0e0;
-  --heart-color: #e06c6c;
-  --github-color: #f0f6fc;
-  --linkedin-color: #0077b5;
-  --x-twitter-color: #ffffff;
+  --color-background: #1a1a1a;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #999;
+
+  --color-border: #333;
+
+  --color-link: #66b3ff;
+  --color-bg-strong: #2d2d2d;
+  --color-bg-social: linear-gradient(145deg, #222, #1a1a1a);
+
+  /* Brand Colors */
+  --color-github: #f0f6fc;
+  --color-linkedin: #0077b5;
+  --color-x-twitter: #ffffff;
+
+  --color-heart: #e06c6c;
 }
 
+/* Base Styles */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
   display: flex;
   flex-direction: column;
   font-family: "IBM Plex Sans", serif;
@@ -45,10 +55,18 @@ body {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
 }
 
+strong {
+  background-color: var(--color-bg-strong);
+  border-radius: 3px;
+  font-weight: 500;
+  padding: 1px 4px;
+}
+
+/* Typography */
 h1,
 h2,
 h3,
@@ -60,20 +78,14 @@ h6 {
 }
 
 h1:not(.header-title):not(.post-title) {
-  border-bottom: 2px solid var(--heading-border);
+  border-bottom: 2px solid var(--color-border);
 }
 
-strong {
-  background-color: var(--strong-bg);
-  border-radius: 3px;
-  font-weight: 500;
-  padding: 1px 4px;
-}
-
+/* Layout Components */
 header {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -81,17 +93,18 @@ main {
   flex: 1;
 }
 
+footer {
+  border-top: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
 .footer-content {
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
-footer {
-  border-top: 1px solid var(--border-color);
-  padding-bottom: 1rem;
-  text-align: center;
-}
-
+/* Navigation */
 nav ul {
   align-items: center;
   display: flex;
@@ -102,12 +115,28 @@ nav ul {
 }
 
 nav a {
-  color: var(--link-color);
+  color: var(--color-link);
   font-weight: 400;
   padding: 0.5rem 0;
   position: relative;
 }
 
+nav ul li a::after {
+  background-color: currentColor;
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Header Styles */
 .header-title {
   font-size: 3rem;
   font-weight: 600;
@@ -119,10 +148,11 @@ nav a {
   color: inherit;
 }
 
+/* Home Page Styles */
 .home-content {
-  max-width: 42rem;
-  margin: 3rem auto;
   font-size: 1.2rem;
+  margin: 3rem auto;
+  max-width: 42rem;
 }
 
 .home-content p {
@@ -141,12 +171,13 @@ nav a {
 }
 
 .home-content li::before {
+  color: var(--color-link);
   content: "•";
-  color: var(--link-color);
-  position: absolute;
   left: 0;
+  position: absolute;
 }
 
+/* Social Icons */
 .social-icons {
   display: flex;
   gap: 1.25rem;
@@ -156,11 +187,11 @@ nav a {
 
 .social-icons a {
   align-items: center;
-  background: var(--social-icon-bg);
+  background: var(--color-bg-social);
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  color: var(--text-color);
+  color: var(--color-text-primary);
   display: flex;
   font-size: 1.4rem;
   height: 3.2rem;
@@ -176,19 +207,20 @@ nav a {
 }
 
 .social-icons a:hover .fa-github {
-  color: var(--github-color);
+  color: var(--color-github);
 }
 
 .social-icons a:hover .fa-linkedin-in {
-  color: var(--linkedin-color);
+  color: var(--color-linkedin);
 }
 
 .social-icons a:hover .fa-x-twitter {
-  color: var(--x-twitter-color);
+  color: var(--color-x-twitter);
 }
 
+/* Post Styles */
 .post-header {
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--color-border);
   padding-bottom: 0.1rem;
 }
 
@@ -200,7 +232,7 @@ nav a {
 
 .post-meta {
   align-items: center;
-  color: var(--post-meta-color);
+  color: var(--color-text-secondary);
   display: flex;
   font-size: 0.9rem;
   justify-content: space-between;
@@ -214,17 +246,18 @@ nav a {
   margin-left: auto;
 }
 
+/* Post Content Styles */
 .post-content h2 {
   font-size: 1.8rem;
-  margin-top: 2.5rem;
   margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
 }
 
 .post-content h3 {
-  color: var(--text-color);
+  color: var(--color-text-primary);
   font-size: 1.4rem;
-  margin-top: 2rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .post-content p {
@@ -242,22 +275,22 @@ nav a {
 }
 
 .post-content hr {
-  background-color: var(--border-color);
+  background-color: var(--color-border);
   border: none;
   height: 1px;
   margin: 2.5rem 0;
 }
 
 .post-content blockquote {
-  border-left: 3px solid var(--border-color);
-  color: var(--post-meta-color);
+  border-left: 3px solid var(--color-border);
+  color: var(--color-text-secondary);
   font-style: italic;
   margin: 1.5rem 0;
   padding-left: 1.25rem;
 }
 
 .post-content code {
-  background-color: var(--strong-bg);
+  background-color: var(--color-bg-strong);
   border-radius: 3px;
   font-family: monospace;
   font-size: 0.9em;
@@ -265,7 +298,7 @@ nav a {
 }
 
 .post-content pre {
-  background-color: var(--strong-bg);
+  background-color: var(--color-bg-strong);
   border-radius: 6px;
   margin: 1.5rem 0;
   overflow-x: auto;
@@ -285,37 +318,44 @@ nav a {
   max-width: 100%;
 }
 
-.fa-heart {
-  color: var(--heart-color);
+/* Post List Styles */
+.post-list {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
 }
 
+.post-list li {
+  align-items: baseline;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+}
+
+.post-list time {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  min-width: 120px;
+}
+
+.post-list a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/* Theme Toggle */
 #theme-toggle {
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
   padding: 0.5rem;
   position: relative;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: transform 0.2s ease;
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: currentColor;
-  transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
+  width: 2rem;
 }
 
 #theme-toggle:hover {
@@ -323,18 +363,18 @@ nav ul li a:hover::after {
 }
 
 #theme-toggle svg {
-  position: absolute;
-  width: 1.8rem;
   height: 1.8rem;
+  position: absolute;
   transition: opacity 0.2s ease, transform 0.3s ease;
+  width: 1.8rem;
 }
 
 #theme-toggle .sun-icon {
   opacity: 0;
-  transform: rotate(-90deg) scale(0.5);
   stroke: #ffd700;
-  stroke-width: 1.75;
   stroke-linecap: round;
+  stroke-width: 1.75;
+  transform: rotate(-90deg) scale(0.5);
 }
 
 #theme-toggle .sun-icon circle {
@@ -356,64 +396,36 @@ nav ul li a:hover::after {
   transform: rotate(90deg) scale(0.5);
 }
 
+/* Back to Top Button */
 #back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   background: #f8f9fa;
-  color: #212529;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 50%;
   border: 1px solid #dee2e6;
-  font-size: 20px;
-  line-height: 1;
+  border-radius: 50%;
+  bottom: 20px;
+  color: #212529;
   cursor: pointer;
+  display: none;
+  font-size: 20px;
+  height: 40px;
+  line-height: 1;
   opacity: 0.8;
+  position: fixed;
+  right: 20px;
+  text-align: center;
   transition: opacity 0.3s;
+  width: 40px;
 }
 
 #back-to-top:hover {
   opacity: 1;
 }
 
-.post-list {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
+/* Icons */
+.fa-heart {
+  color: var(--color-heart);
 }
 
-.post-list li {
-  padding: 0.75rem 0;
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
-}
-
-.post-list time {
-  color: var(--post-meta-color);
-  font-size: 0.9rem;
-  min-width: 120px;
-}
-
-.post-list a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-  .post-list li {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .post-list time {
-    min-width: unset;
-  }
-}
-
+/* Media Queries */
 @media screen and (max-width: 768px) {
   nav {
     width: 100%;
@@ -433,5 +445,14 @@ nav ul li a:hover::after {
 
   #theme-toggle {
     margin-left: auto;
+  }
+
+  .post-list li {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .post-list time {
+    min-width: unset;
   }
 }
