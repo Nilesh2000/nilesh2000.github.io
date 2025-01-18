@@ -8,6 +8,6 @@ I've always wanted to create a digital space for myself on the internet, but I k
 
 I read extensively and maintain a comprehensive collection of bookmarks (yes, I have a hoarding problem 😅). I also take plenty of notes on Notion while reading and learning. The idea behind this blog is to share these notes and make them accessible from anywhere.
 
-My founder Chinmay says: **"Writing crystallizes your thinking."**. At my current company, One2N, the founders encourage us to keep learning something new every day and share the knowledge with others. And this blog will be my way of putting that advice into practice.
+My founder Chinmay says: **"Writing crystallizes your thinking."** At my current company, [One2N](https://one2n.io/), the founders encourage us to keep learning something new every day and share the knowledge with others. This blog will be my way of putting that advice into practice.
 
 *Fin! Until next time* 👋🏻
