@@ -356,6 +356,29 @@ nav ul li a:hover::after {
   transform: rotate(90deg) scale(0.5);
 }
 
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #f8f9fa;
+  color: #212529;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #dee2e6;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+#back-to-top:hover {
+  opacity: 1;
+}
+
 @media screen and (max-width: 768px) {
   header {
     align-items: flex-start;
