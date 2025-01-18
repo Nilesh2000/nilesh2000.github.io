@@ -14,10 +14,25 @@ Renders a menu for the given menu ID with a theme switcher.
   <nav>
     <ul>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-      <li>
-        <button id="theme-toggle" aria-label="Toggle theme">
-          <i class="fa-regular fa-moon" id="theme-icon"></i>
-        </button>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.5" />
+
+          <line x1="12" y1="4" x2="12" y2="2" />
+          <line x1="12" y1="22" x2="12" y2="20" />
+          <line x1="4" y1="12" x2="2" y2="12" />
+          <line x1="22" y1="12" x2="20" y2="12" />
+
+          <line x1="18.4" y1="18.4" x2="19.8" y2="19.8" />
+          <line x1="18.4" y1="5.6" x2="19.8" y2="4.2" />
+          <line x1="5.6" y1="18.4" x2="4.2" y2="19.8" />
+          <line x1="5.6" y1="5.6" x2="4.2" y2="4.2" />
+        </svg>
+
+        <svg class="moon-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
       </li>
     </ul>
   </nav>
