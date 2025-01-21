@@ -8,6 +8,8 @@
     {{ $dateHuman := "" }}
     {{ if eq .Section "posts" }}
     {{ $dateHuman = .Date | time.Format "January 2, 2006" }}
+    {{ else if eq .Section "til" }}
+    {{ $dateHuman = .Date | time.Format "January 2, 2006" }}
     {{ else }}
     {{ $dateHuman = .Date | time.Format "January 2006" }}
     {{ end }}
