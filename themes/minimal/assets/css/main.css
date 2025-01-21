@@ -77,10 +77,6 @@ h6 {
   font-weight: 400;
 }
 
-h1:not(.header-title):not(.post-title) {
-  border-bottom: 2px solid var(--color-border);
-}
-
 /* Layout Components */
 header {
   align-items: center;
@@ -319,6 +315,10 @@ nav ul li a:hover::after {
 }
 
 /* Post List Styles */
+.page-title {
+  border-bottom: 2px solid var(--color-border);
+}
+
 .post-list {
   list-style: none;
   margin: 2rem 0;
