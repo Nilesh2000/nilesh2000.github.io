@@ -1,7 +1,7 @@
 +++
 date = '2025-01-21T07:27:29+05:30'
 draft = false
-title = 'Exclude local files without creating a .gitignore'
+title = 'Exclude Local Files Without Creating a .gitignore'
 +++
 
 Sometimes, I maintain a `todo.md` in the root of my projects for personal use. Not everyone does this, so I can't add it to the `.gitignore` file. Doing that would affect the whole team's configuration, and this is just my thing.
