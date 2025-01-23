@@ -110,11 +110,16 @@ nav ul {
   padding: 0;
 }
 
-nav a {
+nav ul li a {
   color: var(--color-link);
   font-weight: 400;
   padding: 0.5rem 0;
   position: relative;
+}
+
+nav ul li a.active {
+  color: var(--color-text-primary);
+  font-weight: 500;
 }
 
 nav ul li a::after {
