@@ -1,17 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+const elToggleTheme = document.querySelector(".toggle input[type='checkbox']");
 
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
+elToggleTheme.checked = localStorage.theme === "dark";
+elToggleTheme.addEventListener("change", () => {
+    const theme = elToggleTheme.checked ? "dark" : "light";
+    setTheme(theme);
 });
 
 document.addEventListener('DOMContentLoaded', function () {

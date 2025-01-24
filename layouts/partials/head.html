@@ -1,6 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<script>
+    const setTheme = (theme) => {
+        theme ??= localStorage.theme || "light";
+        document.documentElement.dataset.theme = theme;
+        localStorage.theme = theme;
+    };
+    setTheme();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -13,4 +21,3 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 {{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
