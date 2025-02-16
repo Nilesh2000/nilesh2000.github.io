@@ -4,8 +4,6 @@ draft = false
 title = 'Dotfiles and Stow'
 +++
 
-# Dotfiles and Stow
-
 In college, I had a Windows laptop. When I got my internship, I customized my development setup for the first time. Then came my first full-time job with a new Mac, and I repeated the process. A year later, I spilled coffee on my office laptop, lost everything, and had to start over. I got a replacement and set everything up again. Soon after, I quit my job and bought a personal laptop, only to go through the same tedious process once more. When I joined One2N, I received another office Mac, and by then, the frustration of repeatedly setting up my development environment had started to get to me.
 
 I never used dotfiles back then. Every time I got a new machine, I set it up from scratch—installing packages and restoring configurations from memory. It was inefficient, frustrating, and time-consuming. No matter how carefully I tried to replicate my setup, something was always off. If you're an engineer who has worked with me before, you know I’m an absolute stickler for productivity. I didn’t want to keep wasting time setting up my development environment.
