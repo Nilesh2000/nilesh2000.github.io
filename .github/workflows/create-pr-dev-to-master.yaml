@@ -1,0 +1,24 @@
+name: Create PR from dev to master
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: dev
+          base: master
+          title: 'dev -> master'
+          body: 'This PR was automatically created via a GitHub Action.'
+          assignees: 'Nilesh2000'
+          reviewers: 'Nilesh2000'
