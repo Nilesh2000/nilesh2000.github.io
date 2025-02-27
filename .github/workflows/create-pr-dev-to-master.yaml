@@ -34,6 +34,6 @@ jobs:
               --base main \
               --head develop \
               --title "`develop` -> `main`" \
-              --body "This PR was automatically created via a GitHub Action."
-              --assignee "@me" \
+              --body "This PR was automatically created via a GitHub Action." \
+              --assignee "@me"
           fi
