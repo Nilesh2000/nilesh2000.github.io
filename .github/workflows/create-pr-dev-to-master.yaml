@@ -3,7 +3,7 @@ name: Create PR from dev to master
 on:
   push:
     branches:
-      - dev
+      - develop
 
 jobs:
   create_pr:
@@ -17,7 +17,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: dev
-          base: master
+          base: main
           title: 'dev -> master'
           body: 'This PR was automatically created via a GitHub Action.'
           assignees: 'Nilesh2000'
