@@ -1,4 +1,4 @@
-name: Create PR from develop to master
+name: Create PR from Develop to Main
 
 on:
   push:
@@ -6,21 +6,28 @@ on:
       - develop
 
 jobs:
-  create_pr:
+  create-pr:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: develop
+
+      - name: Set up GitHub CLI
+        run: |
+          gh auth status || gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: develop
-          base: main
-          title: 'develop -> main'
-          body: 'This PR was automatically created via a GitHub Action.'
-          assignees: 'Nilesh2000'
-          reviewers: 'Nilesh2000'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Check if a PR already exists
+          if gh pr list --base main --head develop --state open --json number | jq -e '. | length > 0'; then
+            echo "PR already exists. Skipping creation."
+          else
+            gh pr create \
+              --base main \
+              --head develop \
+              --title "develop -> main" \
+              --body "This PR was automatically created via a GitHub Action."
+          fi
