@@ -35,6 +35,6 @@ jobs:
               --head develop \
               --title "`develop` -> `main`" \
               --body "This PR was automatically created via a GitHub Action."
+              --reviewer "@me"
               --assignee "Nilesh2000" \
-              --reviewer "Nilesh2000"
           fi
