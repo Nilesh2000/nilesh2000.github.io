@@ -4,7 +4,7 @@ draft = false
 title = 'Shoe Dog'
 +++
 
-Nike has been my go to sportswear brand for some time now. _Shoe Dog_ had been sitting on my _Want to Read_ list for ages. Every time I saw it on a bookstore shelf or a recommendation list, I told myself I would get to it soon. But it was not until I watched Air, the film about Nike’s legendary deal with Michael Jordan, that I finally made the purchase. Something about the film awakened my curiosity and I wanted to know more about the brand. I expected a polished, MBA style business manual, but what I got was something far better. Shoe Dog is raw and personal, showing Phil Knight at his most vulnerable.
+Nike has been my go to sportswear brand for some time now. _Shoe Dog_ had been sitting on my _Want to Read_ list for ages. Every time I saw it on a bookstore shelf or a recommendation list, I told myself I would get to it soon. But it was not until I watched __Air__, the film about Nike’s legendary deal with Michael Jordan, that I finally made the purchase. Something about the film awakened my curiosity and I wanted to know more about the brand. I expected a polished, MBA style business manual, but what I got was something far better. Shoe Dog is raw and personal, showing Phil Knight at his most vulnerable.
 
 Knight’s storytelling is so immersive that I felt his grief when Steve Prefontaine (Nike's first sponsored athlete) passed away in a freak road accident. His journey is filled with uncertainty. He improvised, second guessed himself, and struggled everyday, but never gave up. My biggest takeaway was that even someone like Knight, whose net worth is now __33 billion dollars__, never had it all figured out. Success is messy and this book captures that reality exceptionally well.
 
@@ -35,4 +35,4 @@ Some lines stayed with me after I closed the book:
 
 > Have faith in yourself, but also have faith in faith. Not faith as others define it. Faith as you define it. Faith as faith defines itself in your heart.
 
-Now, if you’ll excuse me, I’m heading out for a 5 KM run 🏃🏻‍♂️‍➡️. In my Nikes, of course.
+Now, if you’ll excuse me, I’m heading out for a 5 KM run. In my Nikes, of course.
