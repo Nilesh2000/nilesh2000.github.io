@@ -16,9 +16,9 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: dev
+          branch: develop
           base: main
-          title: 'dev -> master'
+          title: 'develop -> main'
           body: 'This PR was automatically created via a GitHub Action.'
           assignees: 'Nilesh2000'
           reviewers: 'Nilesh2000'
