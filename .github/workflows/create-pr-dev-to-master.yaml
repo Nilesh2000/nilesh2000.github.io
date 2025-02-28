@@ -29,11 +29,10 @@ jobs:
           if gh pr list --base main --head develop --state open --json number | jq -e '. | length > 0'; then
             echo "PR already exists. Skipping creation."
           else
-            # If no PR exists, create a new one with an assignee and reviewer
+            # If no PR exists, create a new one
             gh pr create \
               --base main \
               --head develop \
-              --title "`develop` -> `main`" \
-              --body "This PR was automatically created via a GitHub Action." \
-              --assignee "@me"
+              --title "\`develop\` -> \`main\`" \
+              --body "This PR was automatically created via a GitHub Action."
           fi
