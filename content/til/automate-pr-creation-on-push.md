@@ -4,7 +4,11 @@ draft = false
 title = 'Automate PR Creation on Push'
 +++
 
-When working with GitHub, automating the creation of pull requests (PRs) can help streamline workflows. Today, I set up a GitHub Action on the repository of personal site to automatically create a PR from `develop` to `main` whenever there is a push to `develop`.
+When working with GitHub, automating the creation of pull requests (PRs) can help streamline workflows. Today, I set up a GitHub Action on the repository of my personal site to automatically create a PR from `develop` to `main` whenever there is a push to `develop`.
+
+## Steps to Set Up
+1. Create a new file in your repository under `.github/workflows/create-pr-dev-to-master.yml`.
+2. Copy and paste the following GitHub Action configuration into the file:
 
 ```yaml
 name: Create PR from Develop to Main
@@ -38,7 +42,7 @@ jobs:
           if gh pr list --base main --head develop --state open --json number | jq -e '. | length > 0'; then
             echo "PR already exists. Skipping creation."
           else
-            # If no PR exists, create a new one with an assignee and reviewer
+            # If no PR exists, create a new one
             gh pr create \
               --base main \
               --head develop \
@@ -48,3 +52,7 @@ jobs:
           fi
 
 ```
+3. Select __Read & Write workflow permissions__ under Settings → Actions → General.
+4. Enable __Allow GitHub Actions to Create and Approve PRs__ under Settings → Actions → General.
+5. Click Save.
+6. Push the changes, and the action will trigger automatically on the next push to `develop`.
