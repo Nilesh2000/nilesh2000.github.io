@@ -138,7 +138,7 @@ Use the first two forms (preferably the first) for readability.
 ### Pointers
 
 - `&` operator **yields a variable’s address**.
-- `` operator **dereferences a pointer** (retrieves the value it points to).
+- `*` operator **dereferences a pointer** (retrieves the value it points to).
 - **No pointer arithmetic** in Go.
 
 ### Standard Library & Documentation
