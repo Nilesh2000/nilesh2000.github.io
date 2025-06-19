@@ -1,6 +1,6 @@
 +++
 date = '2025-06-19T16:08:31+05:30'
-draft = true
+draft = false
 title = 'Abstracting Away My Hugo Theme'
 +++
 
