@@ -4,6 +4,68 @@ title = 'Nilesh D'
 theme = 'minimal'
 
 [params]
-  github = "https://github.com/Nilesh2000"
-  twitter = "https://x.com/NileshD17726498"
-  linkedin = "https://www.linkedin.com/in/nilesh2000/"
+  # Homepage content
+  homepageContent = """
+  Hi! I am a backend engineer at [One2N](https://one2n.io) in Pune, where I primarily work in Golang. I specialize in building efficient and scalable systems, and I love sharing what I've learnt along the way.
+
+  A few facts about me:
+  - I enjoy reading tech blogs, murder mysteries, and non-fiction.
+  - I'm an avid runner, with a 5k PB of 25 minutes.
+  - I'm a die-hard Formula 1 fan and haven't missed a race since 2018.
+  - I spend my free time doing origami.
+  - I like using bullet points everywhere.
+  """
+
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/nilesh2000"
+  aria_label = "GitHub"
+  icon = "fa-brands fa-github"
+
+[[params.social]]
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/nilesh-d-0000000000/"
+  aria_label = "LinkedIn"
+  icon = "fa-brands fa-linkedin-in"
+
+[[params.social]]
+  name = "Twitter"
+  url = "https://x.com/nilesh2000"
+  aria_label = "Twitter"
+  icon = "fa-brands fa-x-twitter"
+
+[[params.social]]
+  name = "Email"
+  url = "mailto:nilesh2000@gmail.com"
+  aria_label = "Email"
+  icon = "fa-solid fa-envelope"
+
+[[params.menu]]
+  name = 'Home'
+  url = '/'
+  weight = 10
+
+[[params.menu]]
+  name = 'Posts'
+  url = '/posts'
+  weight = 20
+
+[[params.menu]]
+  name = 'TIL'
+  url = '/til'
+  weight = 30
+
+[[params.menu]]
+  name = 'Shelf'
+  url = '/shelf'
+  weight = 40
+
+[[params.menu]]
+  name = 'Tags'
+  url = '/tags'
+  weight = 50
+
+[params.umami]
+  enabled = true
+  script_url = "https://umami-six-tan.vercel.app/script.js"
+  website_id = "ff254bcc-f568-431e-b3bb-afadffa5d393"
