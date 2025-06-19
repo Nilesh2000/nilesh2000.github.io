@@ -67,5 +67,5 @@ theme = 'minimal'
 
 [params.umami]
   enabled = true
-  script_url = "https://umami-six-tan.vercel.app/script.js"
-  website_id = "ff254bcc-f568-431e-b3bb-afadffa5d393"
+  scriptUrl = "https://umami-six-tan.vercel.app/script.js"
+  websiteId = "ff254bcc-f568-431e-b3bb-afadffa5d393"
